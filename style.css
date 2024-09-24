@@ -259,6 +259,42 @@ a:hover {
 }
 
 
+/*  NAME ANIMATION  */
+
+.name-cover {
+  position: relative;
+  font-size: 50px;
+  display: inline-block;
+}
+
+.symbols {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.symbol {
+  position: absolute;
+  font-size: 40px;
+  animation: chaoticMove 1s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes chaoticMove {
+  0% {
+      transform: translate(0, 0);
+      opacity: 1;
+  }
+  100% {
+      transform: translate(50px, -50px);
+      opacity: 0;
+  }
+}
+
 
 
 /* SECTIONS */
