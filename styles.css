@@ -9,15 +9,15 @@ body {
 }
 
 .container {
-  max-width: 1200px; /* Adjust as needed */
-  margin: 0 auto; /* Center the container */
-  padding: 0 10%; /* Add padding to the sides */
+  max-width: 1200px; 
+  margin: 0 auto; 
+  padding: 0 10%; 
 }
 
 /* Header */
 header {
-  padding: 2rem 0; /* Adjust padding */
-  text-align: left; /* Align text to the left */
+  padding: 2rem 0; 
+  text-align: left; 
 }
 
 header h3 {
@@ -47,9 +47,9 @@ header .bio {
 
 .project {
   display: flex;
-  flex-direction: column; /* Stack emoji, name, and description vertically */
-  align-items: flex-start; /* Align items to the left */
-  text-align: left; /* Align text to the left */
+  flex-direction: column; 
+  align-items: flex-start; 
+  text-align: left;
   background: none;
   border-radius: 8px;
   padding: 1rem;
@@ -63,9 +63,9 @@ header .bio {
   align-items: center; 
   text-decoration: none;
   color: inherit;
-  padding: 0.5rem; /* Add padding for better hover effect */
-  border-radius: 8px; /* Match the border radius of the project card */
-  transition: box-shadow 0.3s ease, color 0.3s ease; /* Smooth transition */
+  padding: 0.5rem; 
+  border-radius: 8px; 
+  transition: box-shadow 0.3s ease, color 0.3s ease; 
 }
 
 .project a:hover{
@@ -74,35 +74,38 @@ header .bio {
 }
 
 .project .emoji {
-  font-size: 2.5rem; /* Adjust emoji size */
-  margin-right: 1rem; /* Add space between emoji and name */
-  display: inline-block; /* Ensure emoji behaves like an inline element */
-  padding-left: 0; 
+  font-size: 2.5rem; 
+  margin-right: 1rem; 
+  display: inline-block;
   margin-left: 0;
 }
 
 .project h3 {
   font-size: 1.5rem;
-  margin: 0; /* Remove default margin */
+  margin: 0;
 }
 
 .project p {
   font-size: 1rem;
   color: #666;
-  margin-top: 0.5rem; /* Add space between name and description */
+  margin-top: 0.5rem; 
 }
 
 /* Footer */
 footer {
-  padding: 1rem;
-  text-align: left; /* Center the footer content */
+  padding: 1rem 0;
+  text-align: left;
   margin-top: 2rem;
-  color: inherit; /* Use the same text color as the rest of the page */
+  color: inherit;
 }
 
 footer p {
   margin: 0;
-  display: inline-block; /* Make the text inline with the toggle button */
+  display: inline-block;
+}
+
+footer .button {
+  color: yellow;
 }
 
 #theme-toggle {
@@ -110,47 +113,48 @@ footer p {
   border: none;
   cursor: pointer;
   padding: 0;
-  margin-left: 10px; /* Add space between text and toggle */
-  font-size: 1.2rem; /* Adjust icon size */
+  margin-left: 10px;
+  font-size: 1.2rem;
 }
 
 /* Dark Theme Styles */
 body.dark-theme {
-  background-color: #1a1a1a;
-  color: #ffffff;
+  background-color: #1A120B;
+  color: #E5E5CB;
 }
 
 .dark-theme header .bio {
-  color: #ccc;
+  color: #E5E5CB;
 }
 
 .dark-theme .project p {
-  color: #ccc;
+  color: #E5E5CB;
 }
 
 .dark-theme .emoji {
-  filter: brightness(0.8); /* Slightly darken emojis in dark mode */
+  filter: brightness(0.8);
 }
 
+
 #theme-toggle:hover {
-  opacity: 0.8; /* Slightly fade the icon on hover */
-  transform: scale(1.1); /* Slightly enlarge the icon on hover */
-  transition: all 0.3s ease; /* Smooth transition */
+  opacity: 0.8; 
+  transform: scale(1.1);
+  transition: all 0.3s ease;
 }
 
 /* Media Queries */
 @media (max-width: 768px) {
   .projects-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+    grid-template-columns: repeat(2, 1fr); 
   }
 }
 
 @media (max-width: 480px) {
   .projects-grid {
-    grid-template-columns: 1fr; /* 1 column for mobile */
+    grid-template-columns: 1fr;
   }
 
   .project p {
-    margin-left: 0; /* Remove left margin for mobile */
+    margin-left: 0;
   }
 }
