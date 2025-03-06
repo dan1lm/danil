@@ -27,7 +27,7 @@ header h3 {
 
 header .bio {
   font-size: 1.2rem;
-  color: #777;
+  color: #27233A;
   max-width: 600px;
 }
 
@@ -35,7 +35,7 @@ header .bio {
 
 /* Projects Section */
 #projects {
-  padding: 1rem 0;
+  padding: 2rem 0;
 }
 
 .projects-grid {
@@ -87,9 +87,49 @@ header .bio {
 
 .project p {
   font-size: 1rem;
-  color: #666;
+  color: #27233A;
   margin-top: 0.5rem; 
 }
+
+
+
+
+/* Contact Section */
+#contact {
+  padding: 2rem 0; 
+  text-align: left; 
+}
+
+#contact p {
+  font-size: 1.2rem;
+  color: #27233A; 
+  margin: 0; 
+}
+
+#contact a {
+  color: #54b3d6; 
+  text-decoration: none; 
+  transition: color 0.3s ease; 
+}
+
+#contact a:hover {
+  color: #3a8bb0; 
+}
+
+/* Dark Theme Styles for Contact Section */
+body.dark-theme #contact p {
+  color: #EAEFD3; 
+}
+
+body.dark-theme #contact a {
+  color: #54b3d6; 
+}
+
+body.dark-theme #contact a:hover {
+  color: #3a8bb0; 
+}
+
+
 
 /* Footer */
 footer {
@@ -117,10 +157,18 @@ footer .button {
   font-size: 1.2rem;
 }
 
+#theme-toggle .fa-sun {
+  color: orange;
+}
+
 /* Dark Theme Styles */
 body.dark-theme {
   background-color: #1A120B;
   color: #E5E5CB;
+}
+
+body.dark-theme #theme-toggle .fa-moon {
+  color: white;
 }
 
 .dark-theme header .bio {
@@ -141,6 +189,8 @@ body.dark-theme {
   transform: scale(1.1);
   transition: all 0.3s ease;
 }
+
+
 
 /* Media Queries */
 @media (max-width: 768px) {
