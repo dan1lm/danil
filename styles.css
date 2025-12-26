@@ -16,26 +16,56 @@ body {
 
 /* Header */
 header {
-  padding: 2rem 0; 
-  text-align: left; 
+  padding: 1rem 0;
+  text-align: left;
+}
+
+.header-content {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  justify-content: space-between;
+}
+
+.header-text {
+  flex: 0 0 75%;
 }
 
 header h3 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 3rem;
+  margin-bottom: 0.25rem;
 }
 
 header .bio {
-  font-size: 1.2rem;
+  font-size: 1.125rem;
   color: #27233A;
-  max-width: 600px;
+}
+
+.header-photo {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-photo img {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #27233A;
+  margin-left: 10rem;
+}
+
+body.dark-theme .header-photo img {
+  border-color: #E5E5CB;
 }
 
 
 
 /* Projects Section */
 #projects {
-  padding: 1rem 0;
+  padding: 0.5rem 0;
 }
 
 .projects-grid {
@@ -47,14 +77,14 @@ header .bio {
 
 .project {
   display: flex;
-  flex-direction: column; 
-  align-items: flex-start; 
+  flex-direction: column;
+  align-items: flex-start;
   text-align: left;
   background: none;
   border-radius: 8px;
-  padding: 1rem;
+  padding: 0.5rem;
   overflow: hidden;
-  padding-left: 0; 
+  padding-left: 0;
   margin-left: 0;
 }
 
@@ -81,14 +111,14 @@ header .bio {
 }
 
 .project h3 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   margin: 0;
 }
 
 .project p {
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: #27233A;
-  margin-top: 0.5rem; 
+  margin-top: 0.5rem;
 }
 
 
@@ -96,14 +126,14 @@ header .bio {
 
 /* Contact Section */
 #contact {
-  padding: 2rem 0; 
-  text-align: left; 
+  padding: 1rem 0;
+  text-align: left;
 }
 
 #contact p {
-  font-size: 1.2rem;
-  color: #27233A; 
-  margin: 0; 
+  font-size: 1.125rem;
+  color: #27233A;
+  margin: 0;
 }
 
 #contact a {
@@ -133,9 +163,9 @@ body.dark-theme #contact a:hover {
 
 /* Footer */
 footer {
-  padding: 1rem 0;
+  padding: 0.5rem 0;
   text-align: left;
-  margin-top: 2rem;
+  margin-top: 0.5rem;
   color: inherit;
 }
 
