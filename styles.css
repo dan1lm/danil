@@ -224,8 +224,59 @@ body.dark-theme #theme-toggle .fa-moon {
 
 /* Media Queries */
 @media (max-width: 768px) {
+  .header-content {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .header-text {
+    flex: 1;
+    max-width: 100%;
+    display: contents;
+  }
+
+  header h3 {
+    font-size: 2rem;
+    margin-bottom: 0;
+    flex: 1;
+    order: 1;
+  }
+
+  .header-photo {
+    order: 2;
+    flex-shrink: 0;
+  }
+
+  .header-photo img {
+    width: 80px;
+    height: 80px;
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  header .bio {
+    font-size: 0.95rem;
+    order: 3;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
   .projects-grid {
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .project h3 {
+    font-size: 1.1rem;
+  }
+
+  .project p {
+    font-size: 0.85rem;
+  }
+
+  #contact p {
+    font-size: 0.95rem;
   }
 }
 
