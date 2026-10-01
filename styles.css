@@ -269,6 +269,10 @@ body.dark-theme #theme-toggle .fa-moon {
 
 /* Media Queries */
 @media (max-width: 768px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+
   .header-content {
     flex-direction: row;
     flex-wrap: wrap;
@@ -283,20 +287,26 @@ body.dark-theme #theme-toggle .fa-moon {
   }
 
   header h3 {
-    font-size: 2rem;
-    margin-bottom: 0;
+    font-size: clamp(1.5rem, 6.5vw, 2rem);
+    line-height: 1.2;
+    margin: 0;
     flex: 1;
+    min-width: 0;
     order: 1;
+  }
+
+  #header-typewriter {
+    white-space: nowrap;
   }
 
   .header-photo {
     order: 2;
-    flex-shrink: 0;
+    flex: 0 0 auto;
   }
 
   .header-photo img {
-    width: 80px;
-    height: 80px;
+    width: 72px;
+    height: 72px;
     margin-left: 0;
     margin-top: 0;
   }
@@ -310,6 +320,7 @@ body.dark-theme #theme-toggle .fa-moon {
 
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
+    margin: 0 -1rem;
   }
 
   .project h3 {
