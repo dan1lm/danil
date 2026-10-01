@@ -7,23 +7,28 @@
   <title>Danil Merinov</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <script src="https://unpkg.com/@heroicons/react@2.0.18/outline/index.js" defer></script>
 </head>
 
 <body>
+  <script>
+    (function () {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'dark-theme' || (saved === null && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.body.classList.add('dark-theme');
+      }
+    })();
+  </script>
   <div class="container">
     
     <header>
       <div class="header-content">
         <div class="header-text">
           <h3 aria-label="Danil Merinov"><span id="header-typewriter" aria-hidden="true">Danil Merinov</span></h3>
-          <p class="bio">
-            Hey, I'm Danil.
-
-            I'm a Software Engineer at Nomura Asset Management. Previously, I've done software and platform engineering across startup, healthtech, and financial services environments. I studied CS and Mechanical Engineering at Drexel, where I worked in multiple labs and co-authored a biophysics research paper.
-
-            I enjoy building across the full stack - including backend, frontend, ML pipelines, and cloud infrastructure. Outside of work, I like staying active, reading, and watching good TV shows.
-          </p>
+          <div class="bio">
+            <p>Hey, I'm Danil.</p>
+            <p>I'm a Software Engineer at Nomura Asset Management. Previously, I've done software and platform engineering across startup, healthtech, and financial services environments. I studied CS and Mechanical Engineering at Drexel, where I worked in multiple labs and co-authored a biophysics research paper.</p>
+            <p>I enjoy building across the full stack - including backend, frontend, ML pipelines, and cloud infrastructure. Outside of work, I like staying active, reading, and watching good TV shows.</p>
+          </div>
         </div>
         <div class="header-photo">
           <img src="assets/photo.jpg" alt="Danil Merinov">
@@ -58,7 +63,7 @@
           <a href="https://github.com/dan1lm/portfolio-optimization" target="_blank">
             <div class="project-header">
               <span class="emoji">📈</span>
-              <h3>Portfolio Optimization</h3>
+              <h3>Frontier</h3>
             </div>
             <p>A modern portfolio theory implementation.
             Built in Scala, with the purpose of helping investors construct optimal investment portfolios.</p>
@@ -89,7 +94,7 @@
 
     <footer>
       <p>&copy; 2026 Danil Merinov</p>
-      <button id="theme-toggle">
+      <button id="theme-toggle" aria-label="Toggle dark mode">
         <i class="fas fa-sun"></i>
       </button>
     </footer>

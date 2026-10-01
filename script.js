@@ -3,11 +3,7 @@ const themeToggle = document.getElementById('theme-toggle');
 const themeIcon = themeToggle.querySelector('i'); 
 
 
-const savedTheme = localStorage.getItem('theme');
-if (savedTheme) {
-  document.body.classList.add(savedTheme);
-  updateButtonIcon();
-}
+updateButtonIcon();
 
 
 themeToggle.addEventListener('click', () => {

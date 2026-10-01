@@ -23,16 +23,18 @@ header {
 .header-content {
   display: flex;
   align-items: stretch;
-  gap: 0;
+  gap: 2rem;
   justify-content: space-between;
 }
 
 .header-text {
-  flex: 0 0 75%;
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
 header h3 {
   font-size: 3rem;
+  margin-top: 0.5em;
   margin-bottom: 0.25rem;
 }
 
@@ -68,19 +70,19 @@ header .bio {
 }
 
 .header-photo {
-  flex: 1;
+  flex: 0 0 auto;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .header-photo img {
-  width: 240px;
-  height: 240px;
+  width: clamp(160px, 20vw, 240px);
+  height: auto;
+  aspect-ratio: 1;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid #27233A;
-  margin-left: 10rem;
 }
 
 body.dark-theme .header-photo img {
@@ -96,9 +98,13 @@ body.dark-theme .header-photo img {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0rem;
+  grid-template-columns: repeat(4, 1fr);
+}
 
+@media (max-width: 1100px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .project {
@@ -117,17 +123,19 @@ body.dark-theme .header-photo img {
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, z-index 0.3s ease;
 }
 
-.project:hover {
-  transform: scale(1.08);
-  z-index: 2;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
-  border-color: #27233A;
-  background-color: #EAEFD3;
-}
+@media (hover: hover) {
+  .project:hover {
+    transform: scale(1.08);
+    z-index: 2;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    border-color: #27233A;
+    background-color: #EAEFD3;
+  }
 
-body.dark-theme .project:hover {
-  border-color: #E5E5CB;
-  background-color: #1A120B;
+  body.dark-theme .project:hover {
+    border-color: #E5E5CB;
+    background-color: #1A120B;
+  }
 }
 
 .project a {
@@ -162,7 +170,7 @@ body.dark-theme .project:hover {
 .project p {
   font-size: 0.95rem;
   color: #27233A;
-  margin-top: 0.5rem;
+  margin: 0.5rem 0 0;
   transition: color 0.3s ease;
 }
 
@@ -217,10 +225,6 @@ footer {
 footer p {
   margin: 0;
   display: inline-block;
-}
-
-footer .button {
-  color: yellow;
 }
 
 #theme-toggle {
@@ -318,6 +322,10 @@ body.dark-theme #theme-toggle .fa-moon {
     margin-top: 0.5rem;
   }
 
+  header .bio p:first-child {
+    margin-top: 0;
+  }
+
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
     margin: 0 -1rem;
@@ -339,9 +347,5 @@ body.dark-theme #theme-toggle .fa-moon {
 @media (max-width: 480px) {
   .projects-grid {
     grid-template-columns: 1fr;
-  }
-
-  .project p {
-    margin-left: 0;
   }
 }
